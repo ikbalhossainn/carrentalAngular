@@ -1,0 +1,50 @@
+<div class="container-fluid page-header">
+    <h1 class="display-3 text-uppercase text-white mb-3">Car Booking</h1>
+    <div class="d-inline-flex text-white">
+        <h6 class="text-uppercase m-0"><a class="text-white" href="">Home</a></h6>
+        <h6 class="text-body m-0 px-3">/</h6>
+        <h6 class="text-uppercase text-body m-0">Car Booking</h6>
+    </div>
+</div>
+<!-- Page Header Start -->
+
+
+<!-- Detail Start -->
+<div class="container-fluid pt-5">
+    <div *ngFor="let data of products" class="container pt-5 pb-3">
+        <h1 class="display-4 text-uppercase mb-5">{{data.VehiclesTitle}}</h1>
+        <div class="row align-items-center pb-2">
+            <div class="col-lg-6 mb-4">
+                <img class="img-fluid" src="assets/images/{{data.Vimage1}}" alt="">
+            </div>
+            <div class="col-lg-6 mb-4">
+                <h4 class="mb-2">Tk {{data.PricePerDay}}/Day</h4>
+                <div class="d-flex mb-3">
+                    <h6 class="mr-2">Rating:</h6>
+                    <div class="d-flex align-items-center justify-content-center mb-1">
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star-half-alt text-primary mr-1"></small>
+                        <small>(250)</small>
+                    </div>
+                </div>
+                <div class="d-flex py-3 ">
+                    <small class="fa fa-user text-secondary mr-4"> {{data.SeatingCapacity}} seats</small>
+                    <small class="fa fa-calendar-alt text-secondary mr-4">{{data.ModelYear}} Model</small>
+                    <small class="fa fa-car text-secondary mr-4">{{data.FuelType}}</small>
+                </div>
+                <div class="d-flex pt-1">
+                    <button class="btn btn-primary w-50" routerLink="/bookingform">
+                        Book now
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- Detail End -->
+
+
